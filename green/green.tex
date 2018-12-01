@@ -1,0 +1,95 @@
+%\documentclass[aps,twocolumn,superscriptaddress,pra]{revtex4}
+\documentclass[aps,onecolumn,superscriptaddress,showpacs,pra]{revtex4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx,amsmath,color}
+\usepackage{epstopdf}
+\usepackage{bm}
+\usepackage{amsfonts}
+
+\begin{document}
+
+    \title{Hello}
+
+    \author{Tsuyoshi Kadokura}
+    \affiliation{University of Electro-Communications}
+
+    \date{\today}
+    \begin{abstract}
+
+        We wourd like to expeHello World! \ 
+	    \begin{displaymath}
+            \frac{\partial v}{\partial t}
+        \end{displaymath}
+    \end{abstract}
+
+    %\pacs{xx.xx.Mn, xx.xx.Lm, xx.xx.Bc, xx.xx.Fg}
+
+    \maketitle
+
+    \section{INTRODUCTION}
+    \label{s:introduction}
+
+    The successful experimental realization of various synthetic gauge fields
+    drawn considerable theoretical attention~\cite{A. Messiah}
+    with a number of studies.
+
+
+    The remainder of the present paper is organized as follows. In
+    Sec.~\ref{s:formulation}, we formulate the theoretical model
+    for a random potential obey the Langevin equation.
+    The parameter dependence and velocity field are investigated in
+    Secs.~\ref{s:dynamics} and \ref{s:VF}, respectively.
+    Finally, in Sec.~\ref{s:conclusions}, the main results of the present
+    paper are summarized.
+
+    \section{Formulation of the problem}
+    \label{s:formulation}
+
+    We consider a isotropic energy boundaries.
+    The approximation of the many-body effects is used, and the dynamics of the system is
+    describied by the GP equation as follows:
+
+    \begin{eqnarray}
+        \label{eq:GP}
+        i \hbar \frac{\partial}{\partial t}\bm \Psi =
+        - \frac{\hbar^2}{2m}\bm{\nabla}^2\bm{\Psi}
+        &+&i\frac{\hbar k_0}{m} \bm{\nabla} \cdot \bm{\sigma}_\perp \bm\Psi
+        \nonumber\\
+        &+&U(\bm r,t)\bm\Psi
+        + \hat{G}\left( \bm\Psi,\bm \Psi^\dagger\right)\bm\Psi,
+    \end{eqnarray}
+
+
+    %\section{Dynamics of the system}
+    %\label{s:dynamics}
+
+    %consideration qualitative
+
+
+    %\section{Parameter dependence of the critical velocity}
+    %\label{s:parameter}
+
+    %consideration quantitative
+
+
+    %\section{Conclusions}
+    %\label{s:conclusions}
+
+    %In conclusion, we have investigated the dynamics of
+
+    %\begin{acknowledgments}
+    %    The present study was supported by JSPS KAKENHI Grant Numbers %JPxxxxxxxx,
+    %\end{acknowledgments}
+
+    \begin{thebibliography}{99}
+%%%%%%%%%%%% Galilean transformation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \bibitem{A. Messiah}
+        A. Messiah, {\it Quantum Mechanics} (North-Holland, Amsterdam, 1961).
+
+        \bibitem{SM}
+        See Supplemental Material at http:// for movies of the dynamics.
+
+    \end{thebibliography}
+
+\end{document}
+%   eof
