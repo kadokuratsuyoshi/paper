@@ -1,0 +1,304 @@
+%
+%	filename:	sanpo.tex
+%	contents:	道端ノート
+%	author:		1643002:門倉　強
+%
+\documentclass[12pt,a4paper]{jbook}
+%\documentclass[12pt,a4paper]{jarticle}
+%\documentclass[10pt,a4paper]{book}
+%\documentclass[10pt,a4paper]{report}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\topmargin}{0mm}
+\setlength{\headsep}{2truemm}
+\setlength{\textwidth}{460pt}
+\setlength{\textheight}{25.00cm} %{22.80cm}
+\setcounter{tocdepth}{2}
+\usepackage{amsmath,amssymb,bm}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{cases}
+\usepackage{ascmac}
+%\usepackage{wasysym}
+\usepackage{multicol}
+\usepackage{mathrsfs}
+\usepackage[scriptsize]{caption} % 2014/09/27
+\usepackage{fancyhdr}
+%\usepackage[dvipdfmx]{hyperref}
+%\usepackage{showkeys}
+\newcommand{\diff}{\mathrm{d}}				           %
+\newcommand{\divergence}{\mathrm{div}\,}		       %
+\newcommand{\grad}{\mathrm{grad}\,}			           %
+\newcommand{\rot}{\mathrm{rot}\,}			           %
+\newcommand{\const} {{\rm const.}}			           %
+\newcommand{\h}  {{\rm h}}				               % プランク定数
+\newcommand{\na} {N_{\rm A}}				           % アボガドロ定数
+\newcommand{\kb} {k_{\rm B}}				           %
+\newcommand{\me} {m_{\rm e}}				           %
+\newcommand{\lap} {\bigtriangleup}			           %
+\newcommand{\dal} {\Box}				               %
+\renewcommand{\figurename}{FIG.}			           %
+\def\Vec#1{\mbox{\boldmath $#1$}}			           %
+\def\fourier#1 { {\cal F} \left\{ #1 \right\} }		   %
+\def\ifourier#1 { {\cal F}^{-1} \left\{ #1 \right\} }  %
+\def\laplace#1 { {\cal L} \left\{ #1 \right\} }		   %
+\def\ilaplace#1 { {\cal L}^{-1} \left\{ #1 \right\} }  %
+\title{
+{\Huge \tt
+道端ノート} \\
+%{\Large 2021 The University of Electro-Communications \\
+%Doctor's thesis} \\[1cm]
+}
+\author{
+%\LARGE 学籍番号: \fbox{1643002} \\[0.5cm]
+%\LARGE 氏名: \fbox{門倉　強} \\[0.5cm]
+%\LARGE 門倉　強 \\[0.5cm]
+\\
+\large Tsuyoshi Kadokura \\[0.5cm]
+%\LARGE SAITO Research Laboratory \\[0.5cm]
+\date {}
+}
+\begin{document}
+\maketitle
+\makeatletter
+\def\ps@fancy{%
+\def\chaptermark##1{\markboth{\ifnum \c@secnumdepth>\z@ \thechapter\hskip 0.5em\relax \fi ##1}{}}%
+\def\sectionmark##1{\markright {\ifnum \c@secnumdepth >\@ne \thesection\hskip 0.5em\relax \fi ##1}}%
+\ps@@fancy
+\gdef\ps@fancy{\@fancyplainfalse\ps@@fancy}%
+\ifdim\headwidth<0sp
+\global\advance\headwidth123456789sp\global\advance\headwidth\textwidth
+\fi
+}
+\makeatother
+\normalsize
+\pagestyle{fancy}
+\tableofcontents
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\chapter{お散歩}
+\section{歩く音、遠くの音}
+\section{ Near-field, Far-field}
+\section{局所慣性系}
+・散歩の愉しみ、手元の道端ノートはキーワードのマルチツール、
+\\
+・広く浅くから狭く深く、研究室は推敲の道
+\\
+・事故は一瞬、悔いは一生
+\\
+・酒は引き算、断酒は足し算、
+\\
+・堰の流れ、杭の渦
+\section{Sメーターの灯り}
+・トランジスタラジオ
+ミツミ三端子ラジオ＋チューニングメーター
+\section{多摩地域広播電台}
+1ch : TBSラジオ
+    90.5MHz
+\\
+2ch : 文化放送
+    91.6MHz
+\\
+3ch : ニッポン放送
+    93.0MHz
+\\
+4ch : NHK-FM
+    82.5MHz
+\\
+5ch : 調布FM
+    83.8MHz(調布花火大会）
+\\
+6ch : 東京FM
+    80.0MHz
+\\
+月曜日：壇蜜
+金曜日：SHIBA-HAMA
+土曜日：徳光和夫、いとうあさこ、菊池桃子、吉田照美、伊東四朗、みむこじ、ほっこり、
+日曜日：、薬師丸ひろ子、三宅裕司、土田晃之、爆笑問題、鶴瓶、
+\section{ハム/ポータブルワン}
+・調布アマチュア無線クラブ
+　JA1   438.36MHz
+・電気通信大学無線部
+　JA1ZGP
+\section{Air Band}
+調布飛行場
+\section{枕木線路のハルジオン}
+・京王線
+　調布駅：電気通信大学、新光書店、マック、千年ラーメン、ダイソー、布田天神社、ゲゲゲの鬼太郎
+　布田駅：千の藤、
+　西調布駅：江川亭、セリア、100円ローソン（ベーコン）、オザム、
+　飛田給駅：
+　京王多摩川駅：かたやきそば、多摩川児童公園、朝鮮人古住居、北川電機、つげ義春
+　稲城駅：図書館、三沢川、富士そば、
+　7000形、8000形、9000形、5000形ライナー
+\\
+・南武線
+　武蔵溝ノ口駅：いろは商店街、
+　稲田堤駅：たぬきや、松屋夜まつ
+　矢野口駅：すきや、
+　稲城長沼駅：富士プラ、三来軒 中華丼、ガンダム、シャーザク、中村そば、
+　南大丸駅：ヤッターワン、
+　立川駅：カニチャーハン、焼きそば、屋台村、おでんそば、下新田ノ津島神社
+\\
+・西武多摩川線
+　是政駅：にんにくラーメン、
+　競艇場前駅：ローソンの肉まん、
+　多磨駅：もも屋うどん、探鳥会、
+　赤電、黄電、青電、伊豆箱根鉄道、白電
+\\
+・中央線
+　武蔵境駅：餃子の満州、
+　国分寺駅：本屋、文房具屋、
+\\
+・小田急線
+　登戸駅：
+　海老名駅：箱根そば、
+\section{受令波}
+救急・消防
+調布、稲城、府中、狛江、三鷹、府中、国分寺、多摩市
+\section{青空ごはん}
+・食堂
+　A・B・C定 360円
+　うどん・そば 230円
+・折り畳み椅子
+・日よけ帽子
+・ポケットカメラ
+・落花生、パン、ALL FREE
+・ポケットストーブ、燃料、飯盒、手袋、米 150cc、水 180cc
+・弁当
+・自転車、論文、紙、ラジオ、道端ノート
+\section{道端の植物園}
+・マメグンバイナズナ
+・ハルシオン
+・カタバミ
+・タネツケバナ
+・ユウゲショウ
+・ヒメツルソバ
+・オオバコ
+・エノコロクサ
+・チガヤ
+・セイタカアワダチソウ
+・マツヨイグサ
+\section{探鳥会}
+・スズメ
+・ドバト
+・キジバト
+・ハシブトガラス
+・ハシボソガラス
+・ムクドリ
+・オナガ
+・セグロセキレイ
+・ツバメ
+・メジロ
+・ガビチョウ
+・チョウゲンボウ
+・アイガモ
+・シロサギ
+・カワセミ
+・
+\section{地図}
+・稲田堤、矢野口、稲城、稲城長沼、是政、小柳、多摩川、調布、調布ヶ丘、上石原、下石原
+\\
+\includegraphics[width=250mm,angle=90]{inadadutsumi.eps}
+\\
+\includegraphics[width=250mm,angle=90]{inaginaganuma.eps}
+\\
+\includegraphics[width=250mm,angle=90]{koremasa.eps}
+\chapter{道端の文学}
+・端緒
+\\
+えんぴつ、温泉、線路、屋台、酒場、トタン、貨車、道端、立ち飲み、
+三角、微分、ラジオ、放送、受信、海外、飛行機、プロペラ、タイヤ、
+荷台、リヤカー、手押し車、側溝、砂利道、自転車、管制塔、散歩道、
+尾灯、電灯、ひさし、雨宿り、軒先、縁側、縁の下、冷凍庫、氷、
+電線、電柱、碍子、空中線、ローソク、雷、地蔵、雨音、靴音、
+イヤホン、レシーバ、計算尺、曲がり角、蛍光灯、ハム音、団地、
+計算機、電鍵、灯り、取っ手、ドアノブ、真鍮、蝶番、お勝手、
+風呂、薪、ストーブ、やかん、蛇口、ベローズ、障子、日陰、行灯、
+野良猫、パンク、同調、呼び鈴、庚申塔、切符、電話、保線区、
+角運動量、工場、タバコ、八百屋、紙芝居、飴玉、水たまり、
+橋、歩道、手すり、階段、競輪場、床の間、ちゃぶ台、廊下、
+タイル貼り、漆喰、市場、雨戸、雨樋、衣文かけ、鴨居、長押、
+ゆけむり、いとま、表札、畳庵、露天茶屋、マッチ、けむり、
+赤ポスト、赤ちょうちん、木陰、受令波、傍受、Pチャン、
+煙突、鉄塔、四畳半、ひなた、車両基地、浜焼き、
+・春：さくら、ランドセル、
+・夏：花火、夕焼け、とんぼ、海、お墓、水着、
+・秋：どんぐり、紅葉、ススキ、コスモス、古本、
+・冬：雪、てぶくろ、
+\section{ダゲレオ暗箱の調整法}
+\section{多摩川渡し碑朗読部}
+・APS、arXiv朗読
+ abstruct x10、paper x1
+\section{ワフ１形}
+\section{模型屋さん}
+\section{トワイライトゾーン多摩}
+\section{彫刻室、羅針盤、アンドロメダ}
+・夏日星、明星、水鏡、天道
+・M31、M4、M13、M7、M45、M42、M35、(NGC869\&NGC884)
+・お月見　ティコ、グルマルディ、コペルニクス、アリスタルコス、ケプラー
+・4月
+バナナ
+効能：
+・5月
+いちご、
+効能：
+そら豆
+・6月
+びわ、さくらんぼ
+・7月
+桃、アイス
+・8月
+イチジク、かき氷
+・9月
+梨、くり
+・10月：朝五時、オリオン座
+柿
+・11月：朝四時、オリオン座
+リンゴ
+・12月
+ケーキ
+・1月
+みかん
+・2月
+デコポン
+・3月
+キウイ
+天文手帳 11月1日
+理科年表 11月21日
+\chapter{道端の物理}
+\section{グリーン関数}
+\section{計算尺（回転数、取り合い、落差、平均、三尺勾配、所要量、開平、開立、ねずみ算、俵杉算、方陣、摂動スペクトル、馬乗り算、油分け算）}
+\section{Hamilton-Jacobi equation}
+・おもりと穴の開いた円盤
+・流体力学
+　Navier-Stokes equation→ランキン渦
+・電磁気学
+・熱・統計力学
+・量子力学
+\section{無次元数、バッキンガムのπ定理}
+アルキメデス数
+フルード数
+グラスホフ数
+レイノルズ数
+ロズビー数
+ストローハル数
+クヌーセン数
+マッハ数
+ヌセルト数
+プラントル数
+レイリー数
+シュミット数
+管摩擦係数
+抗力係数
+体積弾性係数
+動粘性係数
+摩擦抵抗係数
+メルセンヌ数
+\section{四畳半の道端}
+\chapter{メモ}
+
+\begin{flushright}
+\LaTeX \\
+\end{flushright}
+\end{document}
+%eof
