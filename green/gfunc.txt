@@ -1,0 +1,190 @@
+Green's function
+
+--- Definition of Green function
+
+Dx(t) = f(x(t),t)
+(a d/dt + b) x(t) = v(t)
+D=a d/dt + b
+f(x(t),t)=v(t)
+
+x(t) = x0(t) + int_-inf^inf G(t,t') f(x(t'),t') dt'
+
+D x0(t) = 0
+D G(t,t') = delta(t-t')
+Dx(t) = D x0(t) + int_-inf^inf D G(t,t') f(x(t'),t') dt'
+
+therefore
+Dx(t) = 0 + f(x(t),t)
+
+--- example Galileo Equation
+
+d/dx x(t) = v0
+x(t) = v0t + x0
+
+	-> attempt the Green function 
+
+x(t) = x0(t) + int_-inf^inf G(t,t') (v0) dt'
+
+
+d/dt x0(t) = 0
+x0(t) = a
+
+
+d/dt G(t,t') = delta(t-t')
+d/dt G(t,t') = 0, (t != t') -> G(t,t') = A0 (t<t'), B0 (t'<t)
+
+lim_e->0 int_(t''-e)^(t''+e) d/dt G(t,t')dt = lim_e->0 int(t''-e)^(t''+e) delta(t-t')dt'
+lim_e->0 [G(t,t')|t=t''+e - G(t,t')|t=t''-e] = 1
+B0 - A0 = 1, A0 = 0
+therefore
+B0 = 1
+
+-> G(t,t') = 0 (t<t'), 1 (t'<t)  It is the Green function 
+
+int_inf^inf G'(t,t')(v0) dt' = v0 [int_-inf^t (1) dt' + int_t^inf (0) dt']
+                             = v0 [t']_-inf^t
+							 = v0t + lim_T->-inf[v0 T]
+							 = v0t + c
+
+
+x(t) = x0(t) + int_-inf^inf G(t,t')(v0)dt'
+x(t) = a + [v0t + c]
+     = v0t + c, replace c = a + c
+
+
+-------------------------------------------------
+--- another approach
+
+psi(a) = int G(a,b) p(b) db
+
+we define as follows
+LG(x,x') = delta(x-x')
+
+generate u(x)
+u(x) = int G(x,x')f(x')dx'
+
+we obtain f(x)
+Lu(x) = int L G(x,x')f(x')dx' = int delta(x-x')f(x')dx' = f(x)
+
+
+
+Green's function for the dumping oscillation
+
+newtonian motions of equation
+[d^2/dt^2 + 2r d/dt + w^2]x(t) = f(t)/m
+
+Green's function
+[d^2/dt^2 + 2r d/dt + w^2]G(t,t') = delta(t-t'), t=t' -> delta(t-t') = 1
+
+f(t) = m delta(t-t')
+
+x(t) = int_-infty^infty G(t,t') f(t')/m
+
+[d^2/dt^2 + 2r d/dt + w^2] x(t) = int_-infty^infty dt' [d^2/dt^2 + 2r d/dt + w^2]G(t,t') f(t')/m
+
+= int_-infty^infty dt' delta(t-t') f(t')/m
+
+= f(t)/m
+
+
+
+--------------------------------------------------------------------------------------------------
+
+Laplacian with delta function
+
+laplacian F(r,r') = delta(r-r')
+
+nabla^2 F(r,r') = delta(r-r')
+
+int_V nabla^2 F(r,r') dV = int_V delta(r-r') dV = 1
+
+int_V nabla^2 F(r,r') dV = int_S nabla F(r,r') n dS = 1
+
+int_S nabla F(r,r') n dS = 1
+
+int_S n dS nabla F(r,r') = 1
+
+4 pi r^2 nabla F(r,r') = 1  (because int_S(r) n dS(r) = 4 pi r^2, n is normal direction unit vector)
+
+4 pi r^2 dF(r,r')/dr = 1
+
+4 pi r^2 F(r,r') = r + C
+
+|r-r'| = infty -> F(r,r') = 0
+
+therefore F(r) = -1/(4 pi r^2)
+
+--------------------------------------------------------------------------------------------------
+
+Green's function for the harmonic potential
+
+the classical newtonian harmonic oscillator's equation of motion
+
+m d^2/dt^2 x + kx = 0
+
+general solution
+
+x(t) = A sin wt + B cos wt
+
+where
+
+w = sqrt(k/m)
+
+
+with an additional force F(x,t)
+
+m d^2/dt^2 x(t) + kx(t) = F(x,t)
+m d^2/dt^2 x + kx = F
+
+
+
+Green function method
+
+a function G(t-t') which satisfied as follows
+
+m d^2/dt^2 G(t,t') - k G(t,t') = delta(t-t')
+
+
+[psi(a) = int G(a,b) p(b) db]
+solution of above that
+
+x(t) = int_-infty^infty G(t,t') F(t') dt'
+
+then
+
+substitute to 
+
+m d^2/dt^2 x + kx = int_-infty^infty m d^2/dt^2 G(t,t') F(t') dt' + int_-infty^infty k G(t,t') F(t')dt'
+
+= int_-infty^infty [m d^2/dt^2 G(t,t')+kG(t,t')]F(t')dt'
+
+= int_-infty^infty delta(t-t')F(t')dt'
+
+= F(t)
+
+G(t,t') is called the Green's function
+
+
+x=0 for t<=0
+
+m d^2/dt^2 x + kx = delta(t)
+
+int_-t^t m d^2/dt^2 x(t) dt + int_-t^t kx(t) dt = int_-t^t delta(t) dt
+
+then
+
+int_-t^t m d^2/dt^2 x(t) dt = m d/dt x(t)_-t^t
+
+|int_-t^t kx(t)dt| < 2ek max |x(t)|
+
+int_-t^t delta(t) dt = 1
+
+lim e->0 m x(t)_-t^t = m d/dt x0+ - m d/dt x0- = 1
+
+d/dt x0+ = 1/m
+
+x(0+) = 1/m = Aw
+
+A = 1/(mw)
+
+
