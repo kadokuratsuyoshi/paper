@@ -41,7 +41,7 @@ B0 = 1
 
 -> G(t,t') = 0 (t<t'), 1 (t'<t)  It is the Green function 
 
-int_inf^inf G'(t,t')(v0) dt' = v0 [int_-inf^t (1) dt' + int_t^inf (0) dt']
+int_-inf^inf G'(t,t')(v0) dt' = v0 [int_-inf^t (1) dt' + int_t^inf (0) dt']
                              = v0 [t']_-inf^t
 							 = v0t + lim_T->-inf[v0 T]
 							 = v0t + c
