@@ -14,6 +14,13 @@ sudo apt install texlive-publishers
 sudo apt install -y okular
 \
 \
+aspell
+\
+sudo apt install -y aspell
+\
+$ aspell -l en -c paper.tex
+\
+\
 $ platex paper.tex
 \
 $ dvipdfmx paper.dvi
